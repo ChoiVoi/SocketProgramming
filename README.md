@@ -64,7 +64,7 @@ UED, etc.). All arguments (if any) are separated by a single white space and wil
 yyyy  hh:mm:ss  such  as 30  September  2022  10:31:13).  You  may  assume  that  the 
 communication data files only contain numbers (i.e., integers). 
 
-EDG: Edge Data Generation 
+## EDG: Edge Data Generation 
  
 EDG fileID dataAmount 
  
@@ -88,7 +88,7 @@ After the edge device successfully generates the data samples and stores them in
 prompt  a  proper  message  (e.g.,  “data  generation  done”)  to  indicate  this  command  has  been 
 successfully processed by the edge device.  
  
-UED: Upload Edge Data 
+## UED: Upload Edge Data 
  
 UED fileID 
  
@@ -110,7 +110,7 @@ edgeDeviceName; timestamp; fileID; dataAmount
 supersmartwatch; 30 September 2022 10:31:13; 1; 10 
  
  
-SCS: Server Computation Service 
+## SCS: Server Computation Service 
  
 SCS fileID computationOperation 
  
@@ -131,7 +131,7 @@ error message. If everything is good, the server should send the computation res
 (i.e., the client) and it should display the result properly at the terminal.  
  
  
-DTE: Delete the data file 
+## DTE: Delete the data file 
  
 DTE fileID 
  
@@ -154,7 +154,7 @@ has been successfully deleted and the client should display a successful message
 fileID has been successfully removed from the central server”). 
  
  
-AED: Active Edge Devices 
+## AED: Active Edge Devices 
  
 AED 
  
@@ -168,7 +168,7 @@ no other active edge devices, a notification message of “no other active edge 
 to the client and displayed. The client should next prompt to select one of the available commands.  
  
  
-OUT: Exit edge network  
+## OUT: Exit edge network  
  
 OUT 
  
@@ -199,6 +199,8 @@ It should be an integer between 1 and 5.
 
 Note that all references to python in this specification may be replaced by python3 if you use Python 
 3 rather than Python 2. 
+
+# run client
 The client should accept the following three arguments: 
  
 • server_IP: this is the IP address of the machine on which the server is running. 
@@ -207,7 +209,6 @@ same as the first argument of the server.
 • client_udp_port: this is the port number which the client will listen to/wait for the UDP 
 traffic from the other clients
 
-# run client
 Note that, you do not have to specify the TCP port to be used by the client. You should allow the OS 
 to pick a random available port. Similarly, you should allow the OS to pick a randomly available UDP 
 source port for the UDP client. Each client should be initiated in a separate terminal as follows:
