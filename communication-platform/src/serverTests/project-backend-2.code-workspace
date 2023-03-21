@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "SSH FS - cse",
+			"uri": "ssh://cse/import/glass/3/z5252682"
+		}
+	],
+	"settings": {}
+}
